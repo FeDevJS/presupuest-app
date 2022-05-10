@@ -1,13 +1,33 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+:root {
+  /* --body-bg: hsl(0, 0%, 10%); */
+  --body-bg: linear-gradient(to top, hsl(0, 0%, 90%) 20%, hsl(0, 0%, 99%));
+  --primary-text-clr: hsl(216, 10%, 13%);
+  --primary-ff: 'Bebas Neue', cursive;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  padding: .8rem;
+  color: var(--primary-text-clr);
+  font-family: var(--primary-ff);
+  background: var(--body-bg);
+  letter-spacing: 1.5px;
+}
+main {
+  display: grid;
+  grid-template-rows: 7% 1fr;
+  width: 100%;
+  height: calc(100vh - 1.6rem);
+}
+.headers__containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
