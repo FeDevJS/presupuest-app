@@ -1,0 +1,5 @@
+.main-budget-container__bottom {
+	position: relative;
+	display: grid;
+	border-top: 1px solid black;
+}

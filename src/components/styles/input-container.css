@@ -1,0 +1,68 @@
+.field__container {
+	justify-self: center;
+	position: absolute;
+	display: grid;
+	grid-template-rows: repeat(2, 1fr);
+	justify-items: center;
+	width: 100%;
+	max-width: 400px;
+	height: 100%;
+	max-height: 135px;
+	padding: .3rem;
+	background-color: var(--form-bg);
+	border-radius: 5px;
+	animation: inputIn .3s ease forwards;
+	box-shadow: 1px 1px 5px var(--primary-clr);
+}
+.input-field {
+	width: 100%;
+	max-width: 250px;
+	height: 100%;
+	max-height: 50px;
+	border: 1px solid var(--primary-clr);
+	border-radius: 5px;
+	text-align: center;
+	box-shadow: 1px 1px 5px var(--primary-clr);
+}
+.field-container__buttons__container {
+	display: grid;
+	grid-template-columns: repeat(2, 30%);
+	column-gap: 10px;
+	justify-content: center;
+	width: 100%;
+}
+.field--buttons {
+	position: relative;
+	width: 100%;
+	max-width: 150px;
+	height: 100%;
+	max-height: 40px;
+	font-family: var(--primary-ff);
+	font-size: 1.1rem;
+	border-radius: 5px;
+	border: none;
+	border-left: 2px solid var(--primary-clr);
+	box-shadow: 1px 1px 5px var(--primary-clr);
+	transition: .3s ease;
+}
+.field--buttons:hover {
+	font-size: 1.2rem;
+	box-shadow: 1px 1px 10px var(--primary-clr);
+}
+.field--buttons:active {
+	transform: scale(1.05);
+}
+.input-field:focus {
+	outline: none;
+	border: 2px solid var(--primary-clr);
+	box-shadow: 1px 1px 10px var(--primary-clr);
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+	-webkit-appearance: none; 
+	margin: 0; 
+}
+@keyframes inputIn {
+	from {opacity: 0;}
+	to {opacity: 1}
+}

@@ -21,8 +21,14 @@
 	justify-items: center;
 	align-items: center;
 }
-@media screen and (min-width: 320px) and (max-width: 500px) {
+.budget--green {
+	color: var(--green-clr);
+}
+.budget--red {
+	color: var(--red-clr);
+}
+@media screen and (min-width: 320px) and (max-width: 580px) {
 	.main-budget-container__top {
-		grid-template-columns: 91% 1fr;
+		grid-template-columns: 89% 1fr;
 	}
 }
