@@ -3,6 +3,7 @@ import './index.css';
 import { Loader } from './components/Loader.js';
 import { MainBudgetContainer } from './components/MainBudgetContainer';
 import { MainHeaderContainer } from './components/MainHeaderContainer';
+import { FieldProvider } from './components/FieldProvider';
 export const App = () => {
   const [loaded, setLoaded] = useState(false);
   useEffect(() => {
@@ -13,10 +14,10 @@ export const App = () => {
       {!loaded ? <Loader class="loader" innerText="Loading..." /> : null}
       {
       loaded && 
-      <>
-      <MainHeaderContainer />
-      <MainBudgetContainer />
-      </>
+      <FieldProvider>
+        <MainHeaderContainer />
+        <MainBudgetContainer />
+      </FieldProvider>
       }
     </>
   );

@@ -1,10 +1,13 @@
 import React from 'react';
+import { BudgetSheet } from './BudgetSheet';
+import { ModalField } from './ModalField';
 import './styles/bottom.css';
-export const Bottom = (props) => {
+export const Bottom = () => {
 	return (
 		<>
 			<section className='main-budget-container__bottom'>
-				{props.children}
+				<BudgetSheet />
+				<ModalField />
 			</section>
 		</>
 	);
