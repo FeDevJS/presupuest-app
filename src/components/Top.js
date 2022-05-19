@@ -1,17 +1,17 @@
 import React, { useContext } from 'react';
 import { Button } from './Button';
-import { FieldContext } from './FieldProvider';
+import { FieldContext } from './contexts/FieldProvider';
 import './styles/top.css';
 export const Top = () => {
-	const { fieldValue, handleActive, handleDeleteField } = useContext(FieldContext);
-	let givenClass = !fieldValue ? "budget--red" : fieldValue ? "budget--green" : null;
+	const { budgetValue, handleActive, handleDeleteField } = useContext(FieldContext);
+	let givenClass = !budgetValue ? "budget--red" : budgetValue ? "budget--green" : null;
 	return(
 		<>
 			<section className='main-budget-container__top'>
 				<article className='main-top__leftSide'>
 					<p className='budget__container'>
 						<span className='budget__dollarSign'>$</span>
-						<span className={`budget ${givenClass}`}>{fieldValue || 0}</span>
+						<span className={`budget ${givenClass}`}>{budgetValue || 0}</span>
 					</p>
 				</article>
 				<article className='main-top__rightSide'>

@@ -1,8 +1,9 @@
 import React, { useContext, useEffect, useRef } from 'react';
-import { FieldContext } from './FieldProvider';
+import { FieldContext, RowsContext } from './contexts/FieldProvider';
 import './styles/input-container.css';
 export const InputContainer = () => {
-	const data = useContext(FieldContext);
+	const dataBudget = useContext(FieldContext);
+	const rowData = useContext(RowsContext);
 	const selfContainer = useRef(null);
 	useEffect(() => {
 		const self = selfContainer.current;
@@ -13,27 +14,29 @@ export const InputContainer = () => {
 	return(
 		<>
 			<form ref={selfContainer} className='field__container' autoComplete='off'>
-				<input 
-				type={data.type}
-				className={"input-field"} 
-				name={data.name}
-				placeholder={data.placeHolder}
-				/>
-				<div className='field-container__buttons__container'>
+				{dataBudget.active ? <input {...dataBudget.field} /> : rowData.active ? <input {...rowData.field} /> : null}
+				<div className='field-buttons-container field-container__buttons__container'>
 					<input 
 					className="field--buttons send--btn" 
 					type="submit" 
 					name="send-btn"
-					onClick={data.handleField}
+					onClick={dataBudget.active ? dataBudget.handleField : rowData.active ? rowData.handleField : null}
 					value="Apply" 
 					/>
 					<input 
 					className="field--buttons cancel--btn" 
 					type="submit" 
 					name="cancel-btn"
-					onClick={data.handleField}
+					onClick={dataBudget.active ? dataBudget.handleField : rowData.active ? rowData.handleField : null}
 					value="Cancel" 
 					/>
+					{rowData.active && <input 
+					className="field--buttons delete--btn" 
+					type="submit" 
+					name="delete-btn"
+					onClick={rowData.handleDeleteField}
+					value="C" 
+					/>}
 				</div>
 			</form>
 		</>

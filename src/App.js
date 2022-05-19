@@ -3,7 +3,7 @@ import './index.css';
 import { Loader } from './components/Loader.js';
 import { MainBudgetContainer } from './components/MainBudgetContainer';
 import { MainHeaderContainer } from './components/MainHeaderContainer';
-import { FieldProvider } from './components/FieldProvider';
+import { FieldProvider, RowsProvider } from './components/contexts/FieldProvider';
 export const App = () => {
   const [loaded, setLoaded] = useState(false);
   useEffect(() => {
@@ -16,7 +16,9 @@ export const App = () => {
       loaded && 
       <FieldProvider>
         <MainHeaderContainer />
-        <MainBudgetContainer />
+        <RowsProvider>
+          <MainBudgetContainer />
+        </RowsProvider>
       </FieldProvider>
       }
     </>

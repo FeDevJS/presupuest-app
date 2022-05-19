@@ -1,0 +1,15 @@
+.rows {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	font-size: 1.2rem;
+	border-bottom: 1px solid var(--primary-clr);
+}
+.rows:nth-child(16) {
+	border-bottom: none;
+}
+.rows:hover {
+	background-color: var(--budget-bg);
+}

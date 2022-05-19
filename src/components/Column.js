@@ -1,8 +1,26 @@
 import React from 'react';
-import "./styles/column.css";
+import { Row } from './Row';
+import "./styles/columns.css";
 
-export const Column = (props) => {
+export const Column = ({ colClass, colTitle }) => {
 	return (
-		<article className={`column ${props.colClass}`}>{props.children}</article>
+		<article className={`columns ${colClass}`}>
+			<h2 className='cols-titles'>{colTitle}</h2>
+			<Row rowClassName={colTitle} />
+			<Row rowClassName={colTitle} />
+			<Row rowClassName={colTitle} />
+			<Row rowClassName={colTitle} />
+			<Row rowClassName={colTitle} />
+			<Row rowClassName={colTitle} />
+			<Row rowClassName={colTitle} />
+			<Row rowClassName={colTitle} />
+			<Row rowClassName={colTitle} />
+			<Row rowClassName={colTitle} />
+			<Row rowClassName={colTitle} />
+			<Row rowClassName={colTitle} />
+			<Row rowClassName={colTitle} />
+			<Row rowClassName={colTitle} />
+			<Row rowClassName={colTitle} />
+		</article>
 	);
 };
