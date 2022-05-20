@@ -39,6 +39,6 @@
 }
 @media screen and (min-width: 320px) and (max-width: 580px) {
 	.button {
-		max-width: 30px;
+		max-width: 40px;
 	}
 }

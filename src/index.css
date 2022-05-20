@@ -10,6 +10,7 @@
   --red-clr: hsl(0, 80%, 30%);
 
   --primary-ff: 'Bebas Neue', cursive;
+  --columns-titles-fs: 1.5rem;
   --budget-fs: 1.8rem;
   --main-padding: .8rem;
   --main-max-width: 950px;
