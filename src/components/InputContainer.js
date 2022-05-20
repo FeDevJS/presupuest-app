@@ -14,7 +14,7 @@ export const InputContainer = () => {
 	return(
 		<>
 			<form ref={selfContainer} className='field__container' autoComplete='off'>
-				{dataBudget.active ? <input {...dataBudget.field} /> : rowData.active ? <input {...rowData.field} /> : null}
+				{dataBudget.active ? <input ref={dataBudget.refField} {...dataBudget.field} /> : rowData.active ? <input ref={rowData.refField} {...rowData.field} /> : null}
 				<div className='field-buttons-container field-container__buttons__container'>
 					<input 
 					className="field--buttons send--btn" 
