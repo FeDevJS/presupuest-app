@@ -82,7 +82,6 @@ export const useRowField = () => {
 		};
 		profitsRows.current.forEach((item, index) => {
 			if(localStorage.getItem(`buy-price${index}`) && localStorage.getItem(`sell-price${index}`) && localStorage.getItem(`quantity${index}`)) {
-				console.log("profit 1º if")
 				actualQuantity.current = +localStorage.getItem(`quantity${index}`);
 				actualBuyPriceValue.current = +localStorage.getItem(`buy-price${index}`);
 				actualSellPriceValue.current = +localStorage.getItem(`sell-price${index}`);
@@ -103,7 +102,7 @@ export const useRowField = () => {
 				type: "text",
 				name: "articles-field",
 				className: "input-field",
-				placeholder: "Set article..."
+				placeholder: "Artículo..."
 			});
 		} else if(e.target.matches(".Quantity-rows")) {
 			rowTarget.current = e.target;
@@ -111,7 +110,7 @@ export const useRowField = () => {
 				type: "number",
 				name: "quantity-field",
 				className: "input-field",
-				placeholder: "Set quantity..."
+				placeholder: "Cantidad..."
 			});
 		} else if(e.target.matches(".Buy-price-rows")) {
 			rowTarget.current = e.target;
@@ -119,7 +118,7 @@ export const useRowField = () => {
 				type: "number",
 				name: "buy-price-field",
 				className: "input-field",
-				placeholder: "Set buy price..."
+				placeholder: "p/Compra del artículo"
 			});
 		} else if(e.target.matches(".Sell-price-rows")) {
 			rowTarget.current = e.target;
@@ -127,7 +126,7 @@ export const useRowField = () => {
 				type: "number",
 				name: "sell-price-field",
 				className: "input-field",
-				placeholder: "Set sell price..."
+				placeholder: "p/Venta del artículo"
 			});
 		};
 	};

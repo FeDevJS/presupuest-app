@@ -20,7 +20,7 @@ export const useBudgetField = () => {
 			type: "number",
 			name: "budget-field",
 			className: "input-field",
-			placeholder: "Set budget..."
+			placeholder: "Presupuesto..."
 		});
 	};
 

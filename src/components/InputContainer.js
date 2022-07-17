@@ -21,14 +21,14 @@ export const InputContainer = () => {
 					type="submit" 
 					name="send-btn"
 					onClick={dataBudget.active ? dataBudget.handleField : rowData.active ? rowData.handleField : null}
-					value="Apply" 
+					value="Aplicar" 
 					/>
 					<input 
 					className="field--buttons cancel--btn" 
 					type="submit" 
 					name="cancel-btn"
 					onClick={dataBudget.active ? dataBudget.handleField : rowData.active ? rowData.handleField : null}
-					value="Cancel" 
+					value="Cancelar" 
 					/>
 					{rowData.active && <input 
 					className="field--buttons delete--btn" 
